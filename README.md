@@ -1,6 +1,6 @@
 # vuex-demo
 
-> A Vue.js project
+> A Vuex project
 
 ## Build Setup
 
@@ -15,4 +15,4 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+refer link : [https://www.youtube.com/watch?v=2CSr2vBApSI](https://www.youtube.com/watch?v=2CSr2vBApSI)
