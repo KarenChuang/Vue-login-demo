@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <ul>
-      <li v-for="user in unregisteredUsers">
+      <li v-for="user in users">
         {{user.name}} <button @click="join(user)">join us</button>
       </li>
     </ul>
@@ -15,13 +15,10 @@
     // },
     computed: {
       users() {
-        return this.$store.state.usersList
-      },
-      unregisteredUsers() {
-        return this.users.filter((user) => {
+        return this.$store.state.usersList.filter((user) => {
           return !user.registered
         })
-      }
+      },
     },
     methods: {
       join (user) {
