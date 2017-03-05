@@ -15,9 +15,7 @@
     // },
     computed: {
       users() {
-        return this.$store.state.usersList.filter((user) => {
-          return !user.registered
-        })
+        return this.$store.getters.unregisteredUsers
       },
     },
     methods: {
