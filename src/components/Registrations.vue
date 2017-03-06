@@ -10,17 +10,19 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default {
-    // props: {
-    //   registrations: Array
-    // },
+    // computed: mapGetters({
+    //     registrations: 'registrations',
+    //     total: 'total'
+    //   }),
     computed: {
-      registrations() {
-        return this.$store.getters.registrations
-      },
-      total() {
-        return this.$store.getters.totalRegistrations
-      }
+      ...mapGetters({
+        registrations: 'registrations',
+        total: 'total'
+      }),
+
+
     },
     methods: {
       deleteRegister(registration) {
