@@ -3,8 +3,6 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-console.log(Vuex)
-
 export const store = new Vuex.Store({
   state: {
     usersList: [

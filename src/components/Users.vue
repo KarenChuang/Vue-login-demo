@@ -1,5 +1,7 @@
 <template>
   <div class="card">
+    <h4>Register here</h4>
+    <hr>
     <ul>
       <li v-for="user in users">
         {{user.name}} <button @click="join(user)">join us</button>
@@ -10,9 +12,6 @@
 
 <script>
   export default {
-    // props: {
-    //   users: Array,
-    // },
     computed: {
       users() {
         return this.$store.getters.unregisteredUsers
@@ -22,7 +21,6 @@
       join (user) {
         user.registered = true
         this.$store.state.registrationsList.push(user)
-        // this.$emit('add', user)
       }
     },
   };

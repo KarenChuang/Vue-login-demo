@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>vuex demo </h1>
-    <!-- <users :users="unregisteredUsers" @add="add"></users> -->
     <users></users>
-    <hr>
-    <!-- <registrations :registrations="registrationsList" @deleteRegister="deleteRegister"></registrations> -->
     <registrations></registrations>
   </div>
 </template>
@@ -27,18 +22,6 @@ export default {
       })
     }
   },
-  methods: {
-    // add(user) {
-    //   this.registrationsList.push(user)
-    // },
-    // deleteRegister(registration) {
-    //   const user = this.usersList.find((item) => {
-    //     return item.id === registration.id
-    //   })
-    //   user.registered = false
-    //   this.registrationsList.splice(this.registrationsList.indexOf(registration), 1)
-    // }
-  },
   components: {
     Users,
     Registrations
@@ -53,7 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
 }
 
 h1, h2 {
@@ -66,11 +49,21 @@ ul {
 }
 
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 
 a {
   color: #42b983;
+}
+
+.card {
+  text-align: left;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 1px #999;
+  margin-right: 20px;
+  padding: 10px;
 }
 </style>

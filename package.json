@@ -2,7 +2,7 @@
   "name": "vuex-demo",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "bingqing.zhong <bingqing.zhong@ele.me>",
+  "author": "KarenChuang<magic_gua@163.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
