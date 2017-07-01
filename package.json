@@ -24,5 +24,8 @@
     "vue-template-compiler": "^2.1.0",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:KarenChuang/Vuex-demo.git",
+  "license": "MIT"
 }
