@@ -19,9 +19,9 @@
     },
     methods: {
       join (user) {
-        user.registered = true
-        this.$store.state.registrationsList.push(user)
+        // mutation payload
+        this.$store.commit('register', user.id)
       }
     },
-  };
+  }
 </script>

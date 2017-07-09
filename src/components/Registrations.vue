@@ -23,11 +23,10 @@
     },
     methods: {
       deleteRegister(registration) {
-        const user = this.$store.state.usersList.find((item) => {
-          return item.id === registration.id
+        this.$store.commit({
+          type: 'unregister',
+          id: registration.id
         })
-        user.registered = false
-        this.$store.state.registrationsList.splice(this.$store.state.registrationsList.indexOf(registration), 1)
       }
     }
   }

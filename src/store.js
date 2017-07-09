@@ -31,8 +31,30 @@ export const store = new Vuex.Store({
       return state.registrationsList
     },
     totalRegistrations(state) {
-      return state.registrationsList.length;
+      return state.registrationsList.length
     }
-
-  }
-});
+  },
+  mutations: {
+    register(state, userId) {
+        const user = state.usersList.find(user => {
+          return user.id == userId
+        })
+        user.registered = true
+        const registrations = {
+          id: userId,
+          name: user.name
+        }
+        state.registrationsList.push(registrations)
+    },
+    unregister(state, payload) {
+      const user = state.usersList.find((item) => {
+        return item.id === payload.id
+      })
+      user.registered = false
+      const registration = state.registrationsList.find(registration => {
+        return registration.id == payload.id
+      })
+      state.registrationsList.splice(state.registrationsList.indexOf(registration), 1)
+    }
+  } 
+})

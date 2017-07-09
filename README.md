@@ -1,12 +1,12 @@
 # vuex-demo
 
-> A Vuex project
+> This is a tutorial about how to use the vuex.
 
-## Build Setup
+## 安装和启动
 
 ``` bash
 # install dependencies
-npm install
+yarn
 
 # serve with hot reload at localhost:8080
 npm run dev
