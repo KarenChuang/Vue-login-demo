@@ -20,7 +20,10 @@
     methods: {
       join (user) {
         // mutation payload
-        this.$store.commit('register', user.id)
+        // this.$store.commit('register', user.id)
+
+        // dispatch action
+        this.$store.dispatch('register', user.id);
       }
     },
   }

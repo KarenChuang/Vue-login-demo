@@ -34,6 +34,7 @@ export const store = new Vuex.Store({
       return state.registrationsList.length
     }
   },
+  // sync
   mutations: {
     register(state, userId) {
         const user = state.usersList.find(user => {
@@ -56,5 +57,13 @@ export const store = new Vuex.Store({
       })
       state.registrationsList.splice(state.registrationsList.indexOf(registration), 1)
     }
-  } 
+  },
+  // async
+  actions: {
+    register({ commit }, userId) {
+      setTimeout(() => {
+        commit('register', userId)
+      }, 1000)
+    }
+  }
 })
